@@ -752,12 +752,6 @@ require('lazy').setup({
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
     },
-    opts = function()
-      local M = require 'plugins.configs.cmp'
-
-      table.insert(M.sources, { name = 'crates' })
-      return M
-    end,
     config = function()
       -- See `:help cmp`
       local cmp = require 'cmp'
@@ -833,6 +827,7 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'crates' },
         },
       }
     end,
